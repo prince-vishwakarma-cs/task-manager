@@ -4,6 +4,7 @@ import { connectDB } from "./utilities/helper.js";
 import userRoutes from "./routes/user.js"
 import taskRoutes from "./routes/task.js"
 import cookieParser from "cookie-parser";
+import cors from "cors"
 import "./services/scheduler.js"
 
 const app=express()
@@ -13,7 +14,7 @@ const Port=process.env.PORT
 const mongo_uri=process.env.MONGO_URI
 
 connectDB(mongo_uri,"Task_manager")
-
+app.use(cors())
 app.use(express.json())
 app.use(cookieParser());
 
