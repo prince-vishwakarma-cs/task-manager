@@ -7,7 +7,6 @@ const app=express.Router()
 app.post("/new",newUser)
 
 app.post("/login",login)
-
 app.post("/logout",logout)
 app.use(auth)
 app.get("/",userinfo)

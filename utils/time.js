@@ -20,7 +20,7 @@ const fetchTasks = async () => {
           );
         }
       });
-      console.log("function executed");
+      console.log("hi");
     } catch (err) {
       console.log(err);
     }
